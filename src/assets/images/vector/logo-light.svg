@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="50" viewBox="0 0 500 500">
+  <defs>
+    <!-- Градиент как в Angular логотипе -->
+
+    <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FF8C00" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#DC143C" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#483D8B" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      @font-face {
+        font-family: 'David Libre';
+        src: url('https://fonts.gstatic.com/s/davidlibre/v12/u-4l5qyxN2Z9-r4Z78A.woff2') format('woff2'),
+        url('https://fonts.gstatic.com/s/davidlibre/v12/u-4l5qyxN2Z9-r4Z78A.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </defs>
+
+  <!-- Текст с градиентом -->
+  <text
+    style="fill: url(#flameGradient); font-family: 'David Libre', serif; font-size: 380px;"
+    x="-590"
+    y="75%"
+  >MLG | dev</text>
+
+  <!-- Или с радиальным градиентом: fill="url(#radialGradient)" -->
+</svg>
