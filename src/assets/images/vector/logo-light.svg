@@ -23,9 +23,11 @@
 
   <!-- Текст с градиентом -->
   <text
-    style="fill: url(#flameGradient); font-family: 'David Libre', serif; font-size: 380px;"
-    x="-590"
-    y="75%"
+    style="fill: url(#flameGradient); font-family: 'David Libre', serif; font-size: 370px;"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    x="250"
+    y="250"
   >MLG | dev</text>
 
   <!-- Или с радиальным градиентом: fill="url(#radialGradient)" -->
