@@ -1,6 +1,6 @@
 @use './styles/variables' as variables;
 @use './styles/fonts';
-@use "./styles/themes/theme";
+@use "./styles/themes";
 
 *,
 *::before,
@@ -25,14 +25,16 @@ ul {
 }
 
 body {
+  font-family: variables.$font-family-primary;
   margin: 0;
-  color: blue;
+  background-color: rgb(var(--bg-main));
 }
 
 .container {
   max-width: 1280px;
   width: 100%;
   padding: 0 32px;
+  margin: 0 auto;
 
   @media (width <= 959px) {
     padding: 0 16px;

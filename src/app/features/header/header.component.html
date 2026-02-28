@@ -1,1 +1,25 @@
-<p>header works!</p>
+<section class="header-main">
+  <div class="header-main__content container">
+    <a class="header-main__link-logo" href="/">
+      <img [ngSrc]="'/assets/images/vector/logo-light.svg'" width="180" height="50" alt="Логотип компании 'MLG development'">
+    </a>
+    <nav class="header-main__nav" aria-label="Основная навигация">
+      <ul class="header-main__list-nav">
+        <li class="header-main__item-nav-link">
+          <a class="header-main__link-nav" href="#">О компании</a>
+        </li>
+        <li class="header-main__item-nav-link">
+          <a class="header-main__link-nav" href="#">Работы</a>
+        </li>
+        <li class="header-main__item-nav-link">
+          <a class="header-main__link-nav" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-main__actions">
+      <button class="header-main__button-themes">
+        <img src="/assets/images/vector/sun.svg">
+      </button>
+    </div>
+  </div>
+</section>
