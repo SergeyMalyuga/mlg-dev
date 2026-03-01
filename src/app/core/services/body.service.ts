@@ -2,7 +2,7 @@ import {inject, Injectable} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {Theme} from '../constants/const';
 
-Injectable({
+@Injectable({
   providedIn: 'root'
 })
 export class BodyService {
@@ -10,6 +10,7 @@ export class BodyService {
   private body = this.document.body;
 
  public toggleDarkTheme(currentTheme: Theme) {
-   this.body.classList.toggle(Theme.DARK, currentTheme !== Theme.DARK);
+   console.log( this.body.classList.contains(Theme.DARK));
+   this.body.classList.toggle(Theme.DARK, !this.body.classList.contains(currentTheme));
   }
 }
