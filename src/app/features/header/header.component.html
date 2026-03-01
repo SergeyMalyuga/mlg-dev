@@ -1,7 +1,9 @@
 <section class="header-main">
   <div class="header-main__content container">
     <a class="header-main__link-logo" href="/">
-      <img [src]="'/assets/images/vector/logo-light.svg'" width="180" height="50" alt="Логотип компании 'MLG development'">
+      <img
+        [src]="currentTheme() === Theme.DARK ? '/assets/images/vector/logo-light.svg' :  '/assets/images/vector/logo-dark.svg'"
+        width="180" height="50" alt="Логотип компании 'MLG development'">
     </a>
     <nav class="header-main__nav" aria-label="Основная навигация">
       <ul class="header-main__list-nav">
@@ -17,7 +19,7 @@
       </ul>
     </nav>
     <div class="header-main__actions">
-      <button class="header-main__button header-main__button-themes">
+      <button appToggleTheme (themeToggled)="changeTheme()" class="header-main__button header-main__button-themes">
         <img src="/assets/images/vector/sun.svg">
       </button>
       <button class="header-main__button header-main__button-burger">

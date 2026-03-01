@@ -1,6 +1,7 @@
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable, OnInit} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {Theme} from '../constants/const';
+import {ThemeService} from './theme.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,6 @@ export class BodyService {
   private body = this.document.body;
 
  public toggleDarkTheme(currentTheme: Theme) {
-   console.log( this.body.classList.contains(Theme.DARK));
-   this.body.classList.toggle(Theme.DARK, !this.body.classList.contains(currentTheme));
+   this.body.classList.toggle(Theme.DARK, currentTheme === Theme.DARK);
   }
 }
