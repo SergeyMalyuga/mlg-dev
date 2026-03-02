@@ -1,0 +1,9 @@
+@use '../../../styles/abstracts/mixins' as mixins;
+
+.theme-toggle {
+    @include mixins.btn-action;
+
+    @media (width <= 768px) {
+      display: none;
+    }
+  }

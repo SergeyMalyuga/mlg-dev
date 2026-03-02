@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as variables;
+@use '../../../styles/abstracts/mixins' as mixins;
 
 .header-main {
   padding: 16px 0;
@@ -13,12 +14,10 @@
   }
 
   &__nav {
-    &-desktop {
       display: flex;
       align-items: center;
       gap: 1.5rem;
       margin-left: auto;
-    }
   }
 
   /*
@@ -70,19 +69,7 @@
   }
   */
   &__button {
-    background-color: transparent;
-    color: rgb(var(--button-main-color));
-    border: none;
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-
-    &:hover {
-      background-color: rgb(var(--button-hover-bg));
-    }
+    @include mixins.btn-action;
 
     &-burger {
       display: none;
@@ -91,10 +78,6 @@
     @media (width <= 768px) {
       &-burger {
         display: block;
-      }
-
-      &-themes {
-        display: none;
       }
     }
   }

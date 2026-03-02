@@ -1,0 +1,15 @@
+@mixin btn-action {
+    background-color: transparent;
+    color: rgb(var(--button-main-color));
+    border: none;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: rgb(var(--button-hover-bg));
+    }
+}

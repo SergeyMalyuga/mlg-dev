@@ -1,16 +1,17 @@
 import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from '@angular/core';
-import {ToggleThemeDirective} from './directives/toggle-theme.directive';
+import {ToggleDirective} from '../../shared/directives/toggle.directive';
 import {BodyService} from '../../core/services/body.service';
 import {ThemeService} from '../../core/services/theme.service';
 import {Theme} from '../../core/constants/const';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {MainNaComponent} from '../main-nav/main-nav.component';
+import {ThemeToggleComponent} from '../../shared/theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
   imports: [
-    ToggleThemeDirective,
-    MainNaComponent
+    MainNaComponent,
+    ThemeToggleComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

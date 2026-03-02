@@ -1,16 +1,17 @@
-<section class="header-main">
+<header class="header-main">
   <div class="header-main__content container">
     <a class="header-main__link-logo" href="/">
       <img
         [src]="currentTheme() === Theme.DARK ? '/assets/images/vector/logo-light.svg' :  '/assets/images/vector/logo-dark.svg'"
         width="180" height="50" alt="Логотип компании 'MLG development'">
     </a>
-    <div class="header-main__nav-desktop">
+    <div class="header-main__nav">
       <app-main-nav/>
       <div class="header-main__actions">
-        <button appToggleTheme (themeToggled)="changeTheme()" class="header-main__button header-main__button-themes">
+        <app-theme-toggle (toggled)="changeTheme()"/>
+        <!--<button appToggleTheme (themeToggled)="changeTheme()" class="header-main__button header-main__button-themes">
           <img src="/assets/images/vector/sun.svg">
-        </button>
+        </button>-->
         <button class="header-main__button header-main__button-burger">
           <svg width="24" height="24">
             <use href="./assets/images/vector/burger.svg#burger"/>
@@ -19,4 +20,4 @@
       </div>
     </div>
   </div>
-</section>
+</header>
