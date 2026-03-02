@@ -1,0 +1,42 @@
+@use '../../../styles/variables' as variables;
+
+.main-nav {
+  @media (width <= 768px) {
+    display: none;
+  }
+
+  &__list {
+    &-nav {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 2px;
+        align-self: stretch;
+        background-color: rgb(var(--gray-100));
+      }
+    }
+  }
+
+  &__link {
+    &-nav {
+      text-decoration: none;
+      color: rgb(var(--text-main-color));
+      font-family: variables.$font-family-primary;
+      font-size: 18px;
+      line-height: 1.5rem;
+      transition: filter 0.5s ease;
+
+      &:hover {
+        filter: brightness(80%);
+      }
+
+      &:active {
+        filter: brightness(60%);
+      }
+    }
+  }
+}

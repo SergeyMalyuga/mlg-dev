@@ -4,11 +4,13 @@ import {BodyService} from '../../core/services/body.service';
 import {ThemeService} from '../../core/services/theme.service';
 import {Theme} from '../../core/constants/const';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {MainNaComponent} from '../main-nav/main-nav.component';
 
 @Component({
   selector: 'app-header',
   imports: [
-    ToggleThemeDirective
+    ToggleThemeDirective,
+    MainNaComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
