@@ -7,7 +7,7 @@ import {BehaviorSubject} from 'rxjs';
 })
 
 export class ThemeService {
-  public currentTheme$ = new BehaviorSubject<Theme>(Theme.DARK);
+  public currentTheme$ = new BehaviorSubject<Theme>(this.getTheme());
 
   public getTheme(): Theme {
     const theme = localStorage.getItem(THEME_KEY) as Theme;

@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from '@angular/core';
-import {ToggleDirective} from '../../shared/directives/toggle.directive';
 import {BodyService} from '../../core/services/body.service';
 import {ThemeService} from '../../core/services/theme.service';
 import {Theme} from '../../core/constants/const';
@@ -29,9 +28,9 @@ export class HeaderComponent implements OnInit {
       .subscribe(theme => {this.currentTheme.set(theme); this.bodyService.toggleDarkTheme(theme)});
   }
 
-  public changeTheme() {
+/*  public changeTheme() {
     this.themeService.toggleTheme();
-  }
+  }*/
 
   protected readonly Theme = Theme;
 }

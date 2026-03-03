@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, inject, Output} from '@angular/core';
 import {ToggleDirective} from '../directives/toggle.directive';
+import {ThemeService} from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-theme-toggle',
@@ -11,9 +12,11 @@ import {ToggleDirective} from '../directives/toggle.directive';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeToggleComponent {
-  @Output() toggled = new EventEmitter<void>();
+  private themeService = inject(ThemeService);
 
-  public onToggled() {
-    this.toggled.emit();
+  public currentTheme = this.themeService.getTheme();
+
+  public changeTheme() {
+    this.themeService.toggleTheme();
   }
 }
