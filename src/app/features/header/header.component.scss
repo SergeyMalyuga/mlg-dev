@@ -4,6 +4,14 @@
 .header-main {
   padding: 16px 0;
 
+  &__link {
+    &-logo {
+      img {
+        display: block;
+      }
+    }
+  }
+
   &__content {
     display: flex;
     align-items: center;

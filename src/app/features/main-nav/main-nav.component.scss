@@ -24,18 +24,18 @@
   &__link {
     &-nav {
       text-decoration: none;
-      color: rgb(var(--text-main-color));
+      color: rgb(var(--link-main-color));
       font-family: variables.$font-family-primary;
       font-size: 18px;
       line-height: 1.5rem;
-      transition: filter 0.5s ease;
+      transition: color 0.5s ease;
 
       &:hover {
-        filter: brightness(80%);
+        color: rgb(var(--link-main-hover-color));
       }
 
       &:active {
-        filter: brightness(60%);
+        color: rgb(var(--link-main-active-color));
       }
     }
   }

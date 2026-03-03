@@ -26,6 +26,8 @@
 
   /* link */
   --link-main-color: var(--gray-600);
+  --link-main-hover-color: var(--gray-600);
+  --link-main-active-color: var(--gray-600);
 
   /* button */
   --button-main-color: var(--gray-600);
@@ -48,6 +50,10 @@ body.theme-dark {
   --gray-900: 249 250 251;
   --gray-950: 255 255 255;
 
+  --lavender-300: 214 204 255;
+  --lavender-400: 183 169 240;
+  --lavender-600: 143 127 217;
+
   /* background */
   --bg-main: var(--gray-default);
   --bg-accent: var(--gray-50);
@@ -59,15 +65,11 @@ body.theme-dark {
   --text-main-color: var(--gray-600);
 
   /* link */
-  --link-main-color: var(--gray-600);
+  --link-main-color: var(--lavender-400);
+  --link-main-hover-color: var(--lavender-300);
+  --link-main-active-color: var(--lavender-600);
 
   /* button */
   --button-main-color: var(--gray-600);
   --button-hover-bg: var(--gray-100);
 }
-
-
-
-
-
-

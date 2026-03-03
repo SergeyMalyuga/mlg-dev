@@ -2,7 +2,7 @@
   <div class="header-main__content container">
     <a class="header-main__link-logo" href="/">
       <img
-        [src]="currentTheme() === Theme.DARK ? '/assets/images/vector/logo-light.svg' :  '/assets/images/vector/logo-dark.svg'"
+        [ngSrc]="LOGO_PATH[currentTheme()]"
         width="180" height="50" alt="Логотип компании 'MLG development'">
     </a>
     <div class="header-main__nav">
