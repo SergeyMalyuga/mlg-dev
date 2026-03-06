@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from '@angular/core';
 import {BodyService} from '../../core/services/body.service';
 import {ThemeService} from '../../core/services/theme.service';
-import {LOGO_PATH, Theme} from '../../core/constants/const';
+import {Theme} from '../../core/constants/const';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {MainNaComponent} from '../main-nav/main-nav.component';
 import {ThemeToggleComponent} from '../../shared/theme-toggle/theme-toggle.component';
@@ -33,7 +33,4 @@ export class HeaderComponent implements OnInit {
 /*  public changeTheme() {
     this.themeService.toggleTheme();
   }*/
-
-  protected readonly Theme = Theme;
-  protected readonly LOGO_PATH = LOGO_PATH;
 }

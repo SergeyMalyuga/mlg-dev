@@ -1,18 +1,9 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DestroyRef,
-  EventEmitter,
-  inject,
-  OnInit,
-  Output,
-  signal
-} from '@angular/core';
+import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from '@angular/core';
 import {ToggleDirective} from '../directives/toggle.directive';
 import {ThemeService} from '../../core/services/theme.service';
 import {NgOptimizedImage} from '@angular/common';
-import {LOGO_PATH, Theme, THEME_PATH} from '../../core/constants/const';
-import {takeUntilDestroyed, toSignal} from '@angular/core/rxjs-interop';
+import {Theme, THEME_PATH} from '../../core/constants/const';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-theme-toggle',
@@ -38,7 +29,5 @@ export class ThemeToggleComponent implements OnInit {
     this.themeService.toggleTheme();
   }
 
-  protected readonly Theme = Theme;
-  protected readonly LOGO_PATH = LOGO_PATH;
   protected readonly THEME_PATH = THEME_PATH;
 }
