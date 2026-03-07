@@ -29,6 +29,13 @@
       animation-direction: alternate;
     }
   }
+
+  &__tetx {
+    &-info {
+      color: rgb(var(--text-main-color));
+      line-height: 24px;
+    }
+  }
 }
 
 @keyframes wave {
