@@ -3,11 +3,18 @@
 .about {
   padding: 96px 0;
   background-color: rgb(var(--bg-accent));
+  color: rgb(var(--text-main-color));
+  line-height: 24px;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 48px;
+
+    @media (width <= 767px) {
+      gap: 24px;
+    }
   }
 
   @media (width <= 1535px) {
@@ -19,13 +26,87 @@
   }
 
   &__title {
-    color: rgb(var(--title-section-color));
-    background-color: rgb(var(--title-section-bg));
-    text-align: center;
-    width: 110px;
-    font-weight: 400;
-    border-radius: 12px;
-    font-size: 15px;
-    line-height: 28px;
+    &-main {
+      color: rgb(var(--title-section-color));
+      background-color: rgb(var(--title-section-bg));
+      text-align: center;
+      width: 110px;
+      font-weight: 400;
+      border-radius: 12px;
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    &-block {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 30px;
+
+      @media (width <= 767px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__wrapper {
+    &-info {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 48px;
+      align-items: center;
+
+      @media (width <= 1043px) {
+        align-items: flex-start;
+      }
+
+      @media (width <= 767px) {
+        flex-direction: column;
+      }
+    }
+
+    &-image {
+      max-width: 400px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media (width <= 1043px) {
+        min-width: 340px;
+      }
+
+      @media (width <= 767px) {
+        max-width: 340px;
+        min-width: min-content;
+        width: 100%;
+      }
+    }
+
+    &-list {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__block {
+    &-text {
+      max-width: 576px;
+      width: 100%;
+
+      p:not(:last-of-type) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-image {
+      @media (width <= 767px) {
+        align-self: center;
+      }
+    }
   }
 }
