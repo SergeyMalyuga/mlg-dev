@@ -1,5 +1,86 @@
 @use '../../../styles/variables' as variables;
 
 .hero {
+  padding: 96px 0;
 
+  &__title {
+    &-main {
+      color: rgb(var(--title-color));
+      font-size: 60px;
+      line-height: 72px;
+      margin-bottom: 8px;
+
+      @media (width <= 1023px) {
+        font-size: 48px;
+        line-height: 100%;
+      }
+
+      @media (width <= 767px) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__emoji {
+    &-hand {
+      display: inline-block;
+      animation: wave 1.2s linear 3;
+      animation-direction: alternate;
+    }
+  }
 }
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/*
+@keyframes wave {
+  to {
+    transform: rotate(0);
+  }
+
+  from {
+    transform: rotate(14deg);
+  }
+}
+*/
+
+/*@keyframes wave { //TODO выбрать вариант анимации
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}*/
