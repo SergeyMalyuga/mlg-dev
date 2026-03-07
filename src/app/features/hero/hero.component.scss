@@ -4,12 +4,39 @@
 .hero {
   padding: 96px 0;
 
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    @media (width <= 792px) {
+      flex-direction: column;
+    }
+  }
+
   &__wrapper {
-    &-column {
-      &-left {
+    &-block {
+      &-text {
+        width: max-content;
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        @media (width <= 792px) {
+          width: 100%;
+          order: 1;
+        }
+      }
+
+      &-image {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        @media (width <= 792px) {
+          justify-content: center;
+          order: 0;
+        }
       }
     }
 
@@ -20,14 +47,37 @@
       width: 24px;
       height: 24px;
     }
+
+    &-image {
+      position: relative;
+      max-width: 330px;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        display: block;
+      }
+
+/*      &::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        right: -50px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(var(--gray-200));
+        z-index: -1;
+      }*/
+    }
   }
 
   &__title {
     &-main {
       color: rgb(var(--title-color));
-      font-size: 60px;
+      font-size: 55px;
       line-height: 72px;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
 
       @media (width <= 1023px) {
         font-size: 48px;
