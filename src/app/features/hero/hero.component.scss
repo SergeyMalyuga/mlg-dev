@@ -4,6 +4,14 @@
 .hero {
   padding: 96px 0;
 
+  @media (width <= 1535px) {
+    padding: 80px 0;
+  }
+
+  @media (width <= 676px) {
+    padding: 64px 0;
+  }
+
   &__content {
     display: flex;
     align-items: center;

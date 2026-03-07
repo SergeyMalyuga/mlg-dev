@@ -21,6 +21,8 @@
 
   /* title */
   --title-color: var(--gray-900);
+  --title-section-color: var(--gray-600);
+  --title-section-bg: var(--gray-200);
 
   /* text */
   --text-main-color: var(--gray-600);
@@ -63,6 +65,8 @@ body.theme-dark {
 
   /* title */
   --title-color: var(--gray-900);
+  --title-section-color: var(--gray-600);
+  --title-section-bg: var(--gray-200);
 
   /* text */
   --text-main-color: var(--gray-600);
@@ -76,7 +80,6 @@ body.theme-dark {
   --button-main-color: var(--gray-600);
   --button-hover-bg: var(--gray-100);
   --button-active-bg: var(--gray-200);
-
   --interactive-hover-bg: var(--gray-100);
   --interactive-active-bg: var(--gray-200);
 }
