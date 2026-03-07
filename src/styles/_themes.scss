@@ -32,7 +32,10 @@
 
   /* button */
   --button-main-color: var(--gray-600);
-  --button-hover-bg: var(--gray-100);
+  --button-hover-bg: var(--gray-200);
+  --button-active-bg: var(--gray-100);
+  --interactive-hover-bg: var(--gray-200);
+  --interactive-active-bg: var(--gray-100);
 }
 
 body.theme-dark {
@@ -72,4 +75,8 @@ body.theme-dark {
   /* button */
   --button-main-color: var(--gray-600);
   --button-hover-bg: var(--gray-100);
+  --button-active-bg: var(--gray-200);
+
+  --interactive-hover-bg: var(--gray-100);
+  --interactive-active-bg: var(--gray-200);
 }

@@ -1,7 +1,7 @@
 @use '../../../styles/abstracts/mixins' as mixins;
 
 .theme-toggle {
-    @include mixins.btn-action;
+    @include mixins.hover-bg;
 
     @media (width <= 768px) {
       display: none;

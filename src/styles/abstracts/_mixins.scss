@@ -1,6 +1,5 @@
-@mixin btn-action {
+@mixin hover-bg {
     background-color: transparent;
-    color: rgb(var(--button-main-color));
     border: none;
     width: 36px;
     height: 36px;
@@ -10,6 +9,10 @@
     transition: background-color 0.5s ease;
 
     &:hover {
-      background-color: rgb(var(--button-hover-bg));
+      background-color: rgb(var(--interactive-hover-bg));
     }
+
+  &:active {
+    background-color: rgb(var(--interactive-active-bg));
+  }
 }

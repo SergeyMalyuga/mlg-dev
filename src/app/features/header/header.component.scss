@@ -29,7 +29,7 @@
   }
 
   &__button {
-    @include mixins.btn-action;
+    @include mixins.hover-bg;
 
     &-burger {
       display: none;

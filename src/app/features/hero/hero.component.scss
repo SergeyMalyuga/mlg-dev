@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as variables;
+@use '../../../styles/abstracts/mixins' as mixins;
 
 .hero {
   padding: 96px 0;
@@ -67,22 +68,6 @@
     }
   }
 
-/*  &__work-status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: rgb(var(--green));
-      animation: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
-    }
-  }*/
-
   &__point {
     position: relative;
     display: block;
@@ -103,6 +88,20 @@
       background-color: rgb(var(--green));
       animation: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
     }
+  }
+
+  &__list {
+    &-social {
+      display: flex;
+      gap: 4px;
+    }
+  }
+
+  &__link {
+    @include mixins.hover-bg;
+
+    display: block;
+    color: rgb(var(--link-main-color));
   }
 }
 
