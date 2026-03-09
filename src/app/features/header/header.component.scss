@@ -3,6 +3,13 @@
 
 .header-main {
   padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(var(--gray-default / 0.5));
+  backdrop-filter: blur(20px);
+  z-index: 10;
 
   &__link {
     &-logo {
