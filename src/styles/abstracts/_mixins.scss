@@ -1,18 +1,39 @@
 @mixin hover-bg {
-    background-color: transparent;
-    border: none;
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 
-    &:hover {
-      background-color: rgb(var(--interactive-hover-bg));
-    }
+  &:hover {
+    background-color: rgb(var(--interactive-hover-bg));
+  }
 
   &:active {
     background-color: rgb(var(--interactive-active-bg));
+  }
+}
+
+@mixin title-main {
+  color: rgb(var(--title-section-color));
+  background-color: rgb(var(--title-section-bg));
+  text-align: center;
+  width: 110px;
+  font-weight: 400;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+@mixin title-secondary {
+  font-size: 20px;
+  line-height: 28px;
+
+  @media (width <= 767px) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
