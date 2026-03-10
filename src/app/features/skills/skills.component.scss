@@ -7,22 +7,12 @@
   color: rgb(var(--text-main-color));
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-
-    @media (width <= 767px) {
-      gap: 24px;
-    }
+    @include mixins.section-content;
   }
 
   &__wrapper {
     &-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+      @include mixins.column-center;
     }
   }
 
@@ -75,9 +65,11 @@
     &-main {
       @include mixins.title-main;
     }
+  }
 
-    &-secondary {
-      @include mixins.title-secondary;
+  &__subtitle {
+    &-section {
+        @include mixins.subtitle-section;
     }
   }
 }

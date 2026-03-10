@@ -28,12 +28,30 @@
   line-height: 28px;
 }
 
-@mixin title-secondary {
+@mixin subtitle-section {
   font-size: 20px;
   line-height: 28px;
 
   @media (width <= 767px) {
     font-size: 18px;
     line-height: 28px;
+  }
+}
+
+@mixin column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@mixin section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @media (width <= 767px) {
+    gap: 24px;
   }
 }
