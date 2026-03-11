@@ -50,10 +50,18 @@
   &.revert {
     .work-card__wrapper--link {
       order: 1;
+
+      @media (width <= 767px) {
+        order: 0;
+      }
     }
 
     .work-card__wrapper--info {
       order: 0;
+
+      @media (width <= 767px) {
+        order: 0;
+      }
     }
     }
 

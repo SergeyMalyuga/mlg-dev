@@ -37,5 +37,35 @@ export const WORKS: Work[] = [
       '      and easily in a few simple clicks.',
     width: 1696,
     height: 1225
+  },
+  {
+    id: nanoid(),
+    image: '/assets/images/raster/aura.jpg',
+    alt: 'Aura',
+    url: 'https://github.com/SergeyMalyuga/aura',
+    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
+      '      and easily in a few simple clicks.',
+    width: 1697,
+    height: 1225
+  },
+  {
+    id: nanoid(),
+    image: '/assets/images/raster/elimak.jpg',
+    alt: 'Elimak',
+    url: 'https://elimak.ru/',
+    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
+      '      and easily in a few simple clicks.',
+    width: 1695,
+    height: 1223
+  },
+  {
+    id: nanoid(),
+    image: '/assets/images/raster/survive.jpg',
+    alt: 'Survive',
+    url: 'https://github.com/SergeyMalyuga/survive',
+    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
+      '      and easily in a few simple clicks.',
+    width: 1698,
+    height: 1222
   }
 ]
