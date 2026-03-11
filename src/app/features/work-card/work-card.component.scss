@@ -1,0 +1,63 @@
+@use '../../../styles/variables' as variables;
+
+.work-card {
+    display: flex;
+
+  &__wrapper {
+    width: 50%;
+    padding: 48px;
+
+    @media (width <= 767px) {
+      width: 100%;
+    }
+
+    @media (width <= 1024px) {
+      padding: 32px;
+    }
+
+    @media (width <= 480px) {
+      padding: 16px;
+    }
+
+    &--link {
+      background-color: rgb(var(--card-bg-main));
+    }
+
+    &--info {
+      background-color: rgb(var(--card-bg-accent));
+    }
+  }
+
+  &__link {
+      display: block;
+      width: 100%;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+  }
+
+  &.revert {
+    .work-card__wrapper--link {
+      order: 1;
+    }
+
+    .work-card__wrapper--info {
+      order: 0;
+    }
+    }
+
+  @media (width <= 767px) {
+    flex-direction: column;
+  }
+}

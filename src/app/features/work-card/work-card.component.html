@@ -1,0 +1,11 @@
+<article class="work-card" [class.revert]="isRevert()">
+  <div class="work-card__wrapper work-card__wrapper--link">
+    <a class="work-card__link" href="{{card.url}}" target="_blank"
+       rel="noopener noreferrer">
+      <img src="{{card.image}}" width="{{card.width}}" height="1{{card.height}}" [attr.alt]="card.alt">
+    </a>
+  </div>
+  <div class="work-card__wrapper work-card__wrapper--info">
+    <p>{{card.description}}</p>
+  </div>
+</article>
