@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {Work} from '../../core/models/work';
+import {WorkCard} from '../../core/models/workCard';
 
 @Component({
   selector: 'app-work-card',
@@ -9,7 +9,7 @@ import {Work} from '../../core/models/work';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorkCardComponent {
-  @Input({required: true}) card!: Work;
+  @Input({required: true}) card!: WorkCard;
   @Input({required: true}) index!: number;
 
   public isRevert() {

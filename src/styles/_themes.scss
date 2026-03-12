@@ -38,7 +38,17 @@
   --button-active-bg: var(--gray-100);
   --interactive-hover-bg: var(--gray-200);
   --interactive-active-bg: var(--gray-100);
+
+  /* card */
+  --card-bg-main: var(--gray-200);
+  --card-bg-accent: var(--gray-100);
+
+  /* tools */
+  --tools-text-color: var(--gray-600);
+  --tools-bg: var(--gray-200);
 }
+
+
 
 body.theme-dark {
   // ==== COLOR ==== //
@@ -86,4 +96,8 @@ body.theme-dark {
   /* card */
   --card-bg-main: var(--gray-200);
   --card-bg-accent: var(--gray-100);
+
+  /* tools */
+  --tools-text-color: var(--gray-600);
+  --tools-bg: var(--gray-200);
 }

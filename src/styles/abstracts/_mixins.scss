@@ -28,6 +28,19 @@
   line-height: 28px;
 }
 
+@mixin span-tools {
+  display: block;
+  color: rgb(var(--tools-text-color));
+  background-color: rgb(var(--tools-bg));
+  text-align: center;
+  width: min-content;
+  padding: 4px 20px;
+  font-weight: 400;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 @mixin subtitle-section {
   font-size: 20px;
   line-height: 28px;
