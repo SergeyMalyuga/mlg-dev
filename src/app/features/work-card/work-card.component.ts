@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {WorkCard} from '../../core/models/workCard';
+import {WorkCard} from '../../core/models/work-card.model';
 
 @Component({
   selector: 'app-work-card',

@@ -5,7 +5,7 @@
       <p class="works__subtitle-section">Вот несколько моих работ:</p>
     </div>
     <ul class="works__list-cards">
-      @for (card of WORKS; track card.id; let i = $index) {
+      @for (card of works(); track card.id; let i = $index) {
         <li class="works__item-card">
           <app-work-card [card]="card" [index]="i"/>
         </li>

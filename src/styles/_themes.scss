@@ -83,6 +83,7 @@ body.theme-dark {
 
   /* link */
   --link-main-color: var(--lavender-400);
+  --link-accent-color: var(--gray-500);
   --link-main-hover-color: var(--lavender-300);
   --link-main-active-color: var(--lavender-600);
 
@@ -90,8 +91,11 @@ body.theme-dark {
   --button-main-color: var(--gray-600);
   --button-hover-bg: var(--gray-100);
   --button-active-bg: var(--gray-200);
+
+  /* interactive */
   --interactive-hover-bg: var(--gray-100);
   --interactive-active-bg: var(--gray-200);
+  --interactive-hover-bg-dark: var(--gray-50);
 
   /* card */
   --card-bg-main: var(--gray-200);

@@ -1,6 +1,3 @@
-import {WorkCard} from '../models/workCard';
-import {nanoid} from 'nanoid';
-
 export enum AppRoutes {
   MAIN = '',
 }
@@ -17,60 +14,3 @@ export const THEME_PATH = {
 
 export const THEME_KEY = 'app-theme';
 
-export const WORKS: WorkCard[] = [
-  {
-    id: nanoid(),
-    image: '/assets/images/raster/cyber-punk.jpg',
-    alt: 'CyberPunk',
-    url: 'https://github.com/SergeyMalyuga/cyberpunk',
-    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
-      '      and easily in a few simple clicks.',
-    width: 1699,
-    height: 1225,
-    tools: ['Typescript', 'Angular', 'RXJS', 'NGRX', 'Swiper'],
-  },
-  {
-    id: nanoid(),
-    image: '/assets/images/raster/moon-river.jpg',
-    alt: 'Moon-River',
-    url: 'https://github.com/SergeyMalyuga/moon-river',
-    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
-      '      and easily in a few simple clicks.',
-    width: 1696,
-    height: 1225,
-    tools: ['Typescript', 'Angular', 'RXJS', 'NGRX', 'Swiper'],
-  },
-  {
-    id: nanoid(),
-    image: '/assets/images/raster/aura.jpg',
-    alt: 'Aura',
-    url: 'https://github.com/SergeyMalyuga/aura',
-    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
-      '      and easily in a few simple clicks.',
-    width: 1697,
-    height: 1225,
-    tools: ['Typescript', 'Angular', 'RXJS', 'NGRX', 'Swiper'],
-  },
-  {
-    id: nanoid(),
-    image: '/assets/images/raster/elimak.jpg',
-    alt: 'Elimak',
-    url: 'https://elimak.ru/',
-    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
-      '      and easily in a few simple clicks.',
-    width: 1695,
-    height: 1223,
-    tools: ['Typescript', 'Angular', 'RXJS', 'NGRX', 'Swiper'],
-  },
-  {
-    id: nanoid(),
-    image: '/assets/images/raster/survive.jpg',
-    alt: 'Survive',
-    url: 'https://github.com/SergeyMalyuga/survive',
-    description: 'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely\n' +
-      '      and easily in a few simple clicks.',
-    width: 1698,
-    height: 1222,
-    tools: ['Typescript', 'Angular', 'RXJS', 'NGRX', 'Swiper'],
-  }
-]

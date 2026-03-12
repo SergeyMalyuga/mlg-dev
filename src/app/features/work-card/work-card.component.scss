@@ -25,6 +25,10 @@
     }
 
     &--info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: center;
       background-color: rgb(var(--card-bg-accent));
     }
   }
@@ -45,6 +49,17 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+
+
+    &-info {
+      color: rgb(var(--link-accent-color));
+
+      @include mixins.hover-bg;
+
+      &:hover {
+        background-color: rgb(var(--interactive-hover-bg-dark));
+      }
     }
   }
 
