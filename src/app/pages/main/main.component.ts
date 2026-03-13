@@ -4,6 +4,7 @@ import {HeroComponent} from '../../features/hero/hero.component';
 import {AboutComponent} from '../../features/about/about.component';
 import {SkillsComponent} from '../../features/skills/skills.component';
 import {WorksComponent} from '../../features/works/works.component';
+import {ContactsComponent} from '../../features/footer/contacts.component';
 
 @Component({
   selector: 'app-main-page',
@@ -12,7 +13,8 @@ import {WorksComponent} from '../../features/works/works.component';
     HeroComponent,
     AboutComponent,
     SkillsComponent,
-    WorksComponent
+    WorksComponent,
+    ContactsComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',

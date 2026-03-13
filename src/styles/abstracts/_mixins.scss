@@ -21,11 +21,11 @@
   color: rgb(var(--title-section-color));
   background-color: rgb(var(--title-section-bg));
   text-align: center;
-  width: 110px;
+  width: max-content;
+  padding: 4px 20px;
   font-weight: 400;
   border-radius: 12px;
   font-size: 15px;
-  line-height: 28px;
 }
 
 @mixin span-tools {

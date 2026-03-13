@@ -1,0 +1,168 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/abstracts/mixins' as mixins;
+
+.contacts {
+  background-color: rgb(var(--bg-main));
+  color: rgb(var(--text-main-color));
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    max-width: 596px;
+    width: 100%;
+
+    &.container {
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      @media (width <= 1535px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      @media (width <= 676px) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+    }
+
+    @media (width <= 767px) {
+      gap: 24px;
+    }
+  }
+
+  &__wrapper {
+    &-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (width <= 767px) {
+        gap: 16px
+      }
+    }
+
+    &-communications {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @media (width <= 767px) {
+        gap: 0;
+      }
+    }
+
+    &-socials {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgb(var(--text-accent-color));
+    font-size: 36px;
+    line-height: 40px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-color: rgb(var(--text-accent-color));
+      mask-image: url("/assets/images/vector/mail-icon.svg");
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: center;
+
+      @media (width <= 767px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        mask-image: url("/assets/images/vector/mail-icon.svg");
+      }
+    }
+
+    &--phone {
+      &::before {
+        mask-image: url("/assets/images/vector/phone-icon.svg");
+      }
+    }
+
+    @media (width <= 767px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__title {
+    &-main {
+      @include mixins.title-main;
+    }
+  }
+
+  &__subtitle {
+    @include mixins.subtitle-section;
+  }
+
+  &__link {
+    display: block;
+    color: rgb(var(--link-main-color));
+
+    @include mixins.hover-bg;
+
+    width: 44px;
+    height: 44px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+
+    @media (width <= 767px) {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--github, &--max {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__list {
+    &-social {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+}

@@ -29,6 +29,8 @@
   &__title {
     &-main {
       @include mixins.title-main;
+
+      line-height: normal;
     }
 
     &-block {
