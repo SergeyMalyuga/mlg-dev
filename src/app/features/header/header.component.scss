@@ -41,6 +41,7 @@
 
     &-burger {
       display: none;
+      color: rgb(var(--button-main-color));
     }
 
     @media (width <= 768px) {
