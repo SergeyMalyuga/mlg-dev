@@ -1,5 +1,15 @@
 @use '../../../styles/variables' as variables;
 
 .footer-main {
+  padding: 24px;
   background-color: rgb(var(--bg-accent));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: rgb(var(--text-main-color));
+
+  @media (width <= 359px) {
+    flex-direction: column;
+  }
 }
