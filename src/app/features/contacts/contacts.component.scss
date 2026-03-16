@@ -83,7 +83,6 @@
       width: 32px;
       height: 32px;
       background-color: rgb(var(--text-accent-color));
-      mask-image: url("/src/assets/images/vector/mail-icon.svg");
       mask-repeat: no-repeat;
       mask-size: cover;
       mask-position: center;
@@ -96,13 +95,13 @@
 
     &--mail {
       &::before {
-        mask-image: url("/src/assets/images/vector/mail-icon.svg");
+        mask-image: url("/assets/images/vector/mail-icon.svg");
       }
     }
 
     &--phone {
       &::before {
-        mask-image: url("/src/assets/images/vector/phone-icon.svg");
+        mask-image: url("/assets/images/vector/phone-icon.svg");
       }
     }
 
