@@ -1,9 +1,7 @@
 @use '../../../styles/variables' as variables;
 
 .main-nav {
-  @media (width <= 768px) {
     display: none;
-  }
 
   &__list {
     &-nav {
@@ -38,5 +36,9 @@
         color: rgb(var(--link-main-active-color));
       }
     }
+  }
+
+  &--open {
+    display: block;
   }
 }

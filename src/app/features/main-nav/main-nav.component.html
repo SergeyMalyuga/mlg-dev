@@ -1,4 +1,4 @@
-<nav class="main-nav" aria-label="Основная навигация">
+<nav class="main-nav" [class.main-nav--open]="isVisible" aria-label="Основная навигация" [attr.aria-hidden]="!isVisible">
   <ul class="main-nav__list-nav">
     <li class="main-nav__item-nav-link">
       <a class="main-nav__link-nav" href="#">О компании</a>

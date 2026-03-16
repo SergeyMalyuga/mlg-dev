@@ -6,10 +6,10 @@
         width="200" height="50" alt="Логотип компании 'MLG development'" priority>
     </a>
     <div class="header-main__nav">
-      <app-main-nav/>
+      <app-main-nav [isVisible]="isNavMenuVisible()"/>
       <div class="header-main__actions">
         <app-theme-toggle/>
-        <button class="header-main__button header-main__button-burger">
+        <button appToggle (toggled)="toggleDialog()" class="header-main__button header-main__button-burger">
           <svg width="24" height="24">
             <use href="./assets/images/vector/burger.svg#burger"/>
           </svg>
@@ -18,3 +18,13 @@
     </div>
   </div>
 </header>
+
+  <div class="header-main__dialog" [class.header-main__dialog--open]="isDialogOpen()" [attr.aria-hidden]="isDialogOpen()">
+    <div class="header-main__wrapper-dialog">
+      <button appToggle (toggled)="toggleDialog()" class="header-main__button-close" type="button">
+        <img src="/assets/images/vector/close-icon.svg"/>
+      </button>
+      <app-main-nav [isVisible]="isDialogOpen()"/>
+      <app-theme-toggle/>
+    </div>
+  </div>
