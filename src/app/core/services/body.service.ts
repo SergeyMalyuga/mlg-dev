@@ -10,7 +10,11 @@ export class BodyService {
   private document = inject(DOCUMENT);
   private body = this.document.body;
 
- public toggleDarkTheme(currentTheme: Theme) {
-   this.body.classList.toggle(Theme.DARK, currentTheme === Theme.DARK);
+  public toggleDarkTheme(currentTheme: Theme) {
+    this.body.classList.toggle(Theme.DARK, currentTheme === Theme.DARK);
+  }
+
+  public setOverflow(hidden: boolean) {
+    this.body.classList.toggle('no-scroll', hidden);
   }
 }

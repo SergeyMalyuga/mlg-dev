@@ -51,5 +51,6 @@ export class HeaderComponent implements OnInit {
 
   public toggleDialog(): void {
     this.isDialogOpen.set(!this.isDialogOpen());
+    this.bodyService.setOverflow(this.isDialogOpen());
   }
 }
