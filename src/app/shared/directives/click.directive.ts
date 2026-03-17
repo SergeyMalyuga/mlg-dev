@@ -1,13 +1,13 @@
 import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[appToggle]',
+  selector: '[appClick]',
 })
-export class ToggleDirective {
-  @Output() toggled = new EventEmitter<void>();
+export class ClickDirective {
+  @Output() clicked = new EventEmitter();
 
   @HostListener('click')
   onClick() {
-    this.toggled.emit();
+    this.clicked.emit();
   }
 }

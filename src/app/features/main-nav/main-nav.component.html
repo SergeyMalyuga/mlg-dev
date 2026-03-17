@@ -1,13 +1,36 @@
-<nav class="main-nav" [class.main-nav--open]="isVisible" aria-label="Основная навигация" [attr.aria-hidden]="!isVisible">
+<nav
+  class="main-nav"
+  [class.main-nav--open]="isVisible"
+  aria-label="Основная навигация"
+  [attr.aria-hidden]="!isVisible"
+>
   <ul class="main-nav__list-nav">
     <li class="main-nav__item-nav-link">
-      <a class="main-nav__link-nav" href="#">О компании</a>
+      <a
+        appClick
+        (clicked)="onClicked()"
+        class="main-nav__link-nav"
+        href="#about"
+        >Обо мне</a
+      >
     </li>
     <li class="main-nav__item-nav-link">
-      <a class="main-nav__link-nav" href="#">Работы</a>
+      <a
+        appClick
+        (clicked)="onClicked()"
+        class="main-nav__link-nav"
+        href="#works"
+        >Работы</a
+      >
     </li>
     <li class="main-nav__item-nav-link">
-      <a class="main-nav__link-nav" href="#">Контакты</a>
+      <a
+        appClick
+        (clicked)="onClicked()"
+        class="main-nav__link-nav"
+        href="#contacts"
+        >Контакты</a
+      >
     </li>
   </ul>
 </nav>

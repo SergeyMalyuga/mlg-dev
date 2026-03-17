@@ -1,4 +1,4 @@
-import {Injectable, signal} from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +8,8 @@ export class BreakpointsService {
   public isMobile = signal<boolean>(this.mediaQuery.matches);
 
   constructor() {
-  this.mediaQuery.addEventListener('change', (evt) => {
-    this.isMobile.set(evt.matches);
-  })
+    this.mediaQuery.addEventListener('change', (evt) => {
+      this.isMobile.set(evt.matches);
+    });
   }
 }

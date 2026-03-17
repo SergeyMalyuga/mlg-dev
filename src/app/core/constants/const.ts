@@ -13,4 +13,3 @@ export const THEME_PATH = {
 } as const;
 
 export const THEME_KEY = 'app-theme';
-

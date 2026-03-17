@@ -8,9 +8,8 @@ describe('MainNaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainNaComponent]
-    })
-    .compileComponents();
+      imports: [MainNaComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MainNaComponent);
     component = fixture.componentInstance;

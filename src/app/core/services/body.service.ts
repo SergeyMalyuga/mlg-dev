@@ -1,10 +1,9 @@
-import {inject, Injectable, OnInit} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
-import {Theme} from '../constants/const';
-import {ThemeService} from './theme.service';
+import { inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Theme } from '../constants/const';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BodyService {
   private document = inject(DOCUMENT);

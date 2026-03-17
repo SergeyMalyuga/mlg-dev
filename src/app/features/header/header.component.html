@@ -3,15 +3,23 @@
     <a class="header-main__link-logo" href="/">
       <img
         ngSrc="/assets/images/vector/logo.svg"
-        width="200" height="50" alt="Логотип компании 'MLG development'" priority>
+        width="200"
+        height="50"
+        alt="Логотип компании 'MLG development'"
+        priority
+      />
     </a>
     <div class="header-main__nav">
-      <app-main-nav [isVisible]="isNavMenuVisible()"/>
+      <app-main-nav [isVisible]="isNavMenuVisible()" />
       <div class="header-main__actions">
-        <app-theme-toggle [isVisible]="isNavMenuVisible()"/>
-        <button appToggle (toggled)="toggleDialog()" class="header-main__button header-main__button-burger">
+        <app-theme-toggle [isVisible]="isNavMenuVisible()" />
+        <button
+          appToggle
+          (toggled)="toggleDialog()"
+          class="header-main__button header-main__button-burger"
+        >
           <svg width="24" height="24">
-            <use href="./assets/images/vector/burger.svg#burger"/>
+            <use href="/assets/images/vector/burger.svg#burger" />
           </svg>
         </button>
       </div>
@@ -19,24 +27,43 @@
   </div>
 </header>
 
-  <div class="header-main__dialog" [class.header-main__dialog--open]="isDialogOpen()" [attr.aria-hidden]="isDialogOpen()">
-    <div class="header-main__wrapper-dialog">
-      <div class="header-main__dialog-header">
-        <a class="header-main__link-logo" href="/">
-          <img
-            ngSrc="/assets/images/vector/logo.svg"
-            width="140" height="35" alt="Логотип компании 'MLG development'" priority>
-        </a>
-        <button appToggle (toggled)="toggleDialog()" class="header-main__button header-main__button-close" type="button">
-          <svg width="24" height="24">
-            <use href="/assets/images/vector/close-icon.svg#close-icon"/>
-          </svg>
-        </button>
-      </div>
-      <app-main-nav [isVisible]="isDialogOpen()"/>
-      <div class="header-main__dialog-footer">
-        <p class="header-main__text-dialog">Переключить тему</p>
-        <app-theme-toggle [isVisible]="isDialogOpen()"/>
-      </div>
+<div
+  class="header-main__dialog"
+  [class.header-main__dialog--open]="isDialogOpen()"
+  role="dialog"
+  aria-modal="true"
+  [attr.aria-hidden]="!isDialogOpen()"
+>
+  <div class="header-main__wrapper-dialog">
+    <div class="header-main__dialog-header">
+      <a class="header-main__link-logo" href="/">
+        <img
+          ngSrc="/assets/images/vector/logo.svg"
+          width="140"
+          height="35"
+          alt="Логотип компании 'MLG development'"
+          priority
+        />
+      </a>
+      <button
+        appCloseDialog
+        (closed)="toggleDialog()"
+        [isOpen]="isDialogOpen()"
+        class="header-main__button header-main__button-close"
+        type="button"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="lucide lucide-x">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <app-main-nav [isVisible]="isDialogOpen()" (clicked)="toggleDialog()" />
+    <div class="header-main__dialog-footer">
+      <p class="header-main__text-dialog">Переключить тему</p>
+      <app-theme-toggle [isVisible]="isDialogOpen()" />
     </div>
   </div>
+</div>

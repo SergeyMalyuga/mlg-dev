@@ -85,7 +85,7 @@
         font-size: clamp(1.625rem, 1.276rem + 1.7452vw, 2.25rem);
       }
 
-/*      @media (width <= 1023px) {
+      /*      @media (width <= 1023px) {
         font-size: 48px;
         line-height: 100%;
       }
@@ -154,7 +154,7 @@
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       top: 0;
       left: 0;
@@ -162,7 +162,7 @@
       height: 12px;
       border-radius: 50%;
       background-color: rgb(var(--green));
-      animation: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     }
   }
 
@@ -204,7 +204,8 @@
 }
 
 @keyframes ping {
-  75%, 100% {
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }

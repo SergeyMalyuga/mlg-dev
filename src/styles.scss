@@ -1,6 +1,6 @@
 @use './styles/variables' as variables;
 @use './styles/fonts';
-@use "./styles/themes";
+@use './styles/themes';
 
 *,
 *::before,
@@ -22,6 +22,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

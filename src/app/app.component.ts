@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, inject} from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {ThemeService} from './core/services/theme.service';
-import {BodyService} from './core/services/body.service';
+import { ThemeService } from './core/services/theme.service';
+import { BodyService } from './core/services/body.service';
 
 @Component({
   selector: 'app-root',

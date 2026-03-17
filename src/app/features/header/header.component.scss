@@ -64,14 +64,15 @@
     backdrop-filter: blur(10px);
     z-index: 100;
     pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+    transition:
+      opacity 0.3s ease,
+      visibility 0s ease 0.3s;
 
     &--open {
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
       transition: opacity 0.3s 0s ease;
-
 
       .header-main__wrapper-dialog {
         transform: translateX(0);
