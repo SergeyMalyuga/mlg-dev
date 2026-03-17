@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, DestroyRef, inject, Input, OnInit, signal} from '@angular/core';
 import {ToggleDirective} from '../directives/toggle.directive';
 import {ThemeService} from '../../core/services/theme.service';
 import {NgOptimizedImage} from '@angular/common';
@@ -16,6 +16,8 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeToggleComponent implements OnInit {
+  @Input({required: true}) isVisible!: boolean;
+
   private themeService = inject(ThemeService);
   private destroyRef = inject(DestroyRef);
 

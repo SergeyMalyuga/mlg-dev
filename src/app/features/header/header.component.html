@@ -8,7 +8,7 @@
     <div class="header-main__nav">
       <app-main-nav [isVisible]="isNavMenuVisible()"/>
       <div class="header-main__actions">
-        <app-theme-toggle/>
+        <app-theme-toggle [isVisible]="isNavMenuVisible()"/>
         <button appToggle (toggled)="toggleDialog()" class="header-main__button header-main__button-burger">
           <svg width="24" height="24">
             <use href="./assets/images/vector/burger.svg#burger"/>
@@ -21,10 +21,22 @@
 
   <div class="header-main__dialog" [class.header-main__dialog--open]="isDialogOpen()" [attr.aria-hidden]="isDialogOpen()">
     <div class="header-main__wrapper-dialog">
-      <button appToggle (toggled)="toggleDialog()" class="header-main__button-close" type="button">
-        <img src="/assets/images/vector/close-icon.svg"/>
-      </button>
+      <div class="header-main__dialog-header">
+        <a class="header-main__link-logo" href="/">
+          <img
+            ngSrc="/assets/images/vector/logo.svg"
+            width="140" height="35" alt="Логотип компании 'MLG development'" priority>
+        </a>
+        <button appToggle (toggled)="toggleDialog()" class="header-main__button header-main__button-close" type="button">
+          <svg width="24" height="24">
+            <use href="/assets/images/vector/close-icon.svg#close-icon"/>
+          </svg>
+        </button>
+      </div>
       <app-main-nav [isVisible]="isDialogOpen()"/>
-      <app-theme-toggle/>
+      <div class="header-main__dialog-footer">
+        <p class="header-main__text-dialog">Переключить тему</p>
+        <app-theme-toggle [isVisible]="isDialogOpen()"/>
+      </div>
     </div>
   </div>

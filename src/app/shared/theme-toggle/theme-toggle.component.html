@@ -1,3 +1,3 @@
-<button appToggle (toggled)="changeTheme()" class="theme-toggle">
+<button appToggle (toggled)="changeTheme()" class="theme-toggle" [class.theme-toggle--visible]="isVisible">
   <img [ngSrc]="THEME_PATH[currentTheme()]" width="24" height="24">
 </button>

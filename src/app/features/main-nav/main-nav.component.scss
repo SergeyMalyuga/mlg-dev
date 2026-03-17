@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as variables;
 
 .main-nav {
-    display: none;
+  display: none;
 
   &__list {
     &-nav {
@@ -15,6 +15,17 @@
         width: 2px;
         align-self: stretch;
         background-color: rgb(var(--gray-100));
+      }
+
+      @media (width <= 768px) {
+        flex-direction: column;
+        padding: 15px;
+        border-top: 1.5px solid rgb(var(--gray-100));
+        border-bottom: 1.5px solid rgb(var(--gray-100));
+
+        &::after {
+          content: none;
+        }
       }
     }
   }

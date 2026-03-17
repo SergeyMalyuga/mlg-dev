@@ -39,9 +39,10 @@
   &__button {
     @include mixins.hover-bg;
 
+    color: rgb(var(--button-main-color));
+
     &-burger {
       display: none;
-      color: rgb(var(--button-main-color));
     }
 
     @media (width <= 768px) {
@@ -66,7 +67,6 @@
     transition: opacity 0.3s ease, visibility 0s ease 0.3s;
 
     &--open {
-      display: block;
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
@@ -76,6 +76,18 @@
       .header-main__wrapper-dialog {
         transform: translateX(0);
       }
+    }
+
+    &-header {
+      display: flex;
+      padding: 15px;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
     }
   }
 
@@ -91,6 +103,12 @@
       height: 100vh;
       background-color: rgb(var(--gray-default));
       transition: transform 0.5s ease;
+    }
+  }
+
+  &__text {
+    &-dialog {
+      color: rgb(var(--text-main-color));
     }
   }
 }
