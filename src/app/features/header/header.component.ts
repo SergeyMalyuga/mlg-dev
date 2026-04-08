@@ -46,6 +46,7 @@ export class HeaderComponent implements OnInit {
       const isMobile = this.breakPointsService.isMobile();
       this.isNavMenuVisible.set(!isMobile);
       if (!isMobile) {
+        this.bodyService.setOverflow(false);
         this.isDialogOpen.set(false);
       }
     });
